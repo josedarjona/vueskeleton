@@ -8,4 +8,13 @@ app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/posts', (req, res) => {
+  res.send(
+    [{
+      title: "lets check",
+      description: "if something shows"
+    }]
+  )
+})
+
 app.listen(process.env.PORT || 8081)
