@@ -6,6 +6,8 @@ import Posts from '@/components/Posts'
 Vue.use(Router)
 
 export default new Router({
+  // to not use #'d links add this
+  // mode: 'history'
   routes: [
     // {
     //   path: '/',
