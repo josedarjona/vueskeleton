@@ -11,7 +11,8 @@
           <td width="550">Description</td>
           <td width="100" align="center">Action</td>
         </tr>
-        <tr :key="post.id" v-for="post in posts">
+        <tr  v-for="post in posts"
+           :key="post._id">
           <td>{{ post.title }}</td>
           <td>{{ post.description }}</td>
           <td align="center">
@@ -48,6 +49,7 @@ export default {
     async deletePost (id) {
       await PostsService.deletePost(id)
       this.$router.push({ name: 'Posts' })
+      this.getPosts()
     }
   }
 }
